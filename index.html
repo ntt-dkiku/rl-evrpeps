@@ -1,1 +1,269 @@
-hello world
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Electric Vehicle Routing with RL</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">
+              Electric Vehicle Routing Problem for <br>Emergency Power Supply<br>
+              <div class="is-size-4 publication-venue">
+                <span>AAMAS 2024 (extended abstract), Work in progress</span>
+              </div>
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <!-- Paper authors -->
+            <span class="author-block">
+              Daisuke Kikuta<sup>1</sup>,
+            </span>
+            <!-- <span class="author-block">
+              <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Daisuke Kikuta</a>,
+            </span> -->
+            <span class="author-block">
+              Hiroki Ikeuchi<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Kengo Tajiri<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Yuta Toyama<sup>2</sup>,
+            </span>
+            <span class="author-block">
+              Masaki Nakamura<sup>2</sup>,
+            </span>
+            <span class="author-block">
+              Yuusuke Nakano<sup>1</sup>
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>NTT Network Service Systems Laboratories, <sup>2</sup>NTT Docomo</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Arxiv PDF link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>AAMAS</span>
+                </a>
+              </span>
+
+              <!-- ArXiv abstract Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Github link -->
+              <span class="link-block">
+                <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="static/videos/evrp-anim.mp4"
+         type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Background</h2>
+        <div class="content has-text-justified">
+          <p>
+            With natural disasters increasing, maintaining infrastructure during disasters has become more critical.
+            As a telecoms campany, our campany has a mission to keep providing the services even during power outages by disasters.
+            The most fundamental challenge there is maintaining the battery of telecoms base stations. 
+            We address this challenge by leveraging Electric Vehicles (EVs) as emergency power sources: 
+            EVs go around to directly supply their power to the base stations, whose power is continuously decreasing.
+            The goal is to find the EVs' routes that minimize both total travel distance and the number of downed base stations.
+            In this research, we formulates our problem settings as a new variant of the Electiric Vehicle Routing Problem (EVRP) 
+            and solve it with a reinforcement learning model.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Paper abstract -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Problem Formulation</h2>
+        <div class="content has-text-justified">
+          <p>
+            The EVRP is a Vehicle Routing Problem that considers EVs power consumption by travel and recharging EVs power in the middle of the route.
+            In contrast to existing EVRPs, our problem additioanlly considers the discharge of EV power at destinations and other mandatory details (i.e., prepare/cleanup time).
+            The discharge time/amount depends on the arrival timing, therby making the optimization more complicated than ever.
+            On the other hand, EVs cycle through four actions: <i>move</i>, <i>prepare</i>, <i>discharge/recharge</i>, and <i>cleanup</i>.
+            Note that, in the context of RL, the action space here is only <i>move</i> (i.e., determining the next destination node), and the others are just acompannied actions to <i>move</i>.
+          </p>
+          <img src="static/images/action_cycle.png" style="display: block; margin: auto;" alt="MY ALT TEXT"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Algorithm-->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Algorithm</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our algorithm consists of a rule-based vehicle selector and a Transformer-based node selector.
+            The vehicle selctor first selects an EV that can start <i>move</i> (finish <i>cleanup</i>) the earliest, 
+            then the node selector determines the next destination node of the selected EV. 
+            By repeating these two processes, it sequentially determines the destination of each EV.
+            As a result, we obtain the sequence of the destinations as a route.
+            We train the node selector with a policy gradient algorithm, REINFORCE.
+          </p>
+          <img src="static/images/docomoev_model.png" alt="MY ALT TEXT"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Algorithm -->
+
+<!-- Results-->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            We compared our algorithm with baselines on synthetic datasets and real datasets.
+            The baselines include naive approaches (greedy assignment (GREED) and random assignment (RAND)) 
+            and a constraint programming for Time-Space Network (TSN). 
+            We set the time limit to 30 minutes considering practical operations.
+            The results show that our algorithm consistently outperforms the baselines in interms of both the objective value (OBJ) and computational time (TIME).
+          </p>
+          <img src="static/images/table.png" alt="MY ALT TEXT"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Results -->
+
+<!-- Algorithm-->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Citation </h2>
+        <div class="content has-text-justified">
+          <pre><code>Preparing.....                 </code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Algorithm -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.<br>
+            The cycle icon in <i>Problem Formulation</i> was created by editting from <a href="https://www.flaticon.com/free-icon/diagram_4585705?term=cycle&related_id=4585705" title="cycle icons">Cycle icons created by srip - Flaticon</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+<!-- End of Statcounter Code -->
+
+</body>
+</html>
